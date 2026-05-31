@@ -1,3 +1,33 @@
-This repository demonstrates a simple CI/CD pipeline using GitHub Actions and Docker.
-It containerizes a static web application using NGINX and automatically builds the Docker image on every push to the main branch
-<img width="950" height="494" alt="Screenshot 2026-05-19 212728" src="https://github.com/user-attachments/assets/8bc1fd70-197e-425f-815c-72bf6292d3b2" />
+## Project Overview
+
+In this project, I built an end-to-end CI/CD pipeline on AWS to automate the process of building and deploying a web application. The goal was to gain hands-on experience with DevOps tools and understand how modern deployment workflows are implemented in real-world environments.
+
+The infrastructure was provisioned using Terraform, allowing resources to be created and managed through code instead of manual configuration. Jenkins was used to automate the deployment pipeline, while Docker was used to package the application into a container for consistent deployment across environments. GitHub serves as the source code repository and triggers the pipeline automatically whenever new code is pushed.
+
+Through this project, I learned how different DevOps tools work together to automate software delivery, reduce manual effort, and improve deployment reliability. It also helped me strengthen my understanding of Infrastructure as Code (IaC), CI/CD pipelines, containerization, and AWS cloud services.
+
+### What I Built
+
+- Provisioned AWS infrastructure using Terraform
+- Launched and configured an EC2 instance
+- Installed and configured Jenkins for automation
+- Containerized the application using Docker
+- Connected GitHub with Jenkins using webhooks
+- Automated the build and deployment process
+- Tested the complete CI/CD workflow from code commit to deployment
+
+### Tools & Technologies
+
+- AWS EC2
+- Terraform
+- Jenkins
+- Docker
+- Git & GitHub
+- Linux
+- Shell Scripting
+
+### Workflow
+
+Developer → GitHub → Jenkins → Docker Build → Deployment on AWS EC2
+
+Whenever code is pushed to GitHub, Jenkins automatically detects the change, builds the application, creates a Docker image, and deploys the latest version to the EC2 instance.
