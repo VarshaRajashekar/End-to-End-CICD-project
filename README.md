@@ -30,3 +30,8 @@ Developer → GitHub → Jenkins → Docker Build → Deployment on AWS EC2
 
 Whenever code is pushed to GitHub, Jenkins automatically detects the change, builds the application, creates a Docker image, and deploys the latest version to the EC2 instance.
 
+<img width="868" height="515" alt="Screenshot 2026-06-03 213416" src="https://github.com/user-attachments/assets/2e6bb983-64bd-4dad-be27-08768ace50ef" />
+<img width="1200" height="1006" alt="Screenshot 2026-06-03 214537" src="https://github.com/user-attachments/assets/3364c3ce-3aa5-482e-9e3b-4ab3b7bf12ee" />
+
+<img width="918" height="1004" alt="Screenshot 2026-06-03 214942" src="https://github.com/user-attachments/assets/515c018d-4ce4-47e9-ae48-34471c20eaea" />
+
