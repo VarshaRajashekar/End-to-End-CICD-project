@@ -43,15 +43,126 @@
                         ▼
                      Grafana
 
-### What I Built
+# ☁️ AWS Infrastructure Provisioning Using Terraform
 
-- Provisioned AWS infrastructure using Terraform
-- Launched and configured an EC2 instance
-- Installed and configured Jenkins for automation
-- Containerized the application using Docker
-- Connected GitHub with Jenkins using webhooks
-- Automated the build and deployment process
-- Tested the complete CI/CD workflow from code commit to deployment
+Terraform is used to automate AWS infrastructure creation.
+
+## Initialize Terraform
+
+```bash
+terraform init
+```
+
+## Validate Terraform Configuration
+
+```bash
+terraform validate
+```
+
+## Create Terraform Plan
+
+```bash
+terraform plan
+```
+
+## Deploy Infrastructure
+
+```bash
+terraform apply
+```
+
+Terraform creates:
+
+- EC2 Jenkins Server
+- Security Groups
+- IAM Roles
+- CloudWatch Resources
+
+---
+
+# 🔧 Jenkins CI/CD Configuration
+
+## Jenkins Plugins Installed
+
+The following plugins are used:
+
+- Git Plugin
+- Git Client Plugin
+- Pipeline Plugin
+- Pipeline Stage View
+- Docker Pipeline Plugin
+- Docker Plugin
+- Credentials Binding Plugin
+- SSH Credentials Plugin
+
+---
+
+# 🔄 CI/CD Pipeline Workflow
+
+The Jenkins pipeline automates the complete application lifecycle.
+
+## Pipeline Stages
+
+### 1. Source Code Checkout
+
+Jenkins pulls the latest code from GitHub.
+
+```
+GitHub Repository
+        |
+        v
+Jenkins Workspace
+```
+
+---
+
+### 2. Docker Image Build
+
+Jenkins builds a Docker image:
+
+```bash
+docker build -t cicd-app .
+```
+
+---
+
+### 3. Deploy Application Container
+
+The Docker container is started:
+
+```bash
+docker run -d -p 5000:5000 --name cicd-app cicd-app
+```
+
+Application runs on:
+
+```
+http://<EC2-PUBLIC-IP>:5000
+```
+
+---
+
+# 🐳 Docker Implementation
+
+The application is containerized using Docker.
+
+## Dockerfile
+
+Example:
+
+```dockerfile
+FROM python:3.10
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY app .
+
+CMD ["python","app.py"]
+```
 
 
 
